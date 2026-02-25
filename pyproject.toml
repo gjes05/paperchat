@@ -1,0 +1,15 @@
+[project]
+name = "paperchat"
+version = "0.1.0"
+description = "RAG-Powered Document Q&A"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "dotenv>=0.9.9",
+    "langchain>=1.2.10",
+    "langchain-community>=0.4.1",
+    "langchain-google-genai>=4.2.1",
+    "langchain-text-splitters>=1.1.1",
+    "pinecone>=8.1.0",
+    "streamlit>=1.54.0",
+]
