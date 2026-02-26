@@ -231,7 +231,7 @@ with st.sidebar:
     st.markdown("""
     <div style="font-size:0.72rem; color:#3a3f52; line-height:1.7;">
     <b style="color:#5a5f72">Stack</b><br>
-    LangChain · Gemini 1.5 Pro<br>
+    LangChain · Gemini 2.5 Flash<br>
     Pinecone · Streamlit<br><br>
     <b style="color:#5a5f72">How it works</b><br>
     1. Upload PDFs<br>
