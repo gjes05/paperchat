@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_google_genai import ChatGoogleGenerativeAI
-from langchain_pinecone import PineconeEmbeddings
+from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from langchain_pinecone import PineconeVectorStore
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_core.prompts import ChatPromptTemplate
@@ -18,7 +18,7 @@ from pinecone import Pinecone, ServerlessSpec
 load_dotenv()
 
 
-EMBEDDING_MODEL = "llama-text-embed-v2"
+EMBEDDING_MODEL = "models/text-embedding-004"
 CHAT_MODEL      = "gemini-2.5-flash"
 CHUNK_SIZE      = 1000
 CHUNK_OVERLAP   = 200
@@ -35,9 +35,9 @@ class PaperChatRAG:
         if not self.pinecone_api_key:
             raise ValueError("PINECONE_API_KEY not found in environment variables.")
 
-        self.embeddings = PineconeEmbeddings(
+        self.embeddings = GoogleGenerativeAIEmbeddings(
             model=EMBEDDING_MODEL,
-            pinecone_api_key=self.pinecone_api_key
+            google_api_key=self.google_api_key
         )
         self.llm = ChatGoogleGenerativeAI(
             model=CHAT_MODEL,
