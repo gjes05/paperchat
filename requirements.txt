@@ -4,8 +4,8 @@ langchain-core
 langchain-community
 langchain-text-splitters
 langchain-google-genai
-langchain-pinecone
-pinecone
+langchain-pinecone==0.2.0
+pinecone==3.2.2
 google-generativeai
 pypdf
 python-dotenv
