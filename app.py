@@ -21,9 +21,9 @@ st.markdown("""
     color: #e8e6e0;
   }
 
-  /* Hide Streamlit branding */
-  #MainMenu, footer { visibility: hidden; }
-  header { visibility: visible; }
+  # /* Hide Streamlit branding */
+  # #MainMenu, footer { visibility: hidden; }
+  # header { visibility: visible; }
 
   /* Sidebar */
   section[data-testid="stSidebar"] {
